@@ -33,10 +33,11 @@ export default function OverOnsPage() {
               </p>
             </div>
             <div className="relative">
+              <div className="absolute inset-0 bg-primary/40 rounded-2xl z-10" />
               <img 
                 src="/images/Overons.jpg" 
                 alt="SBS Electra team"
-                className="rounded-2xl shadow-xl w-full"
+                className="rounded-2xl shadow-xl w-full relative z-0"
               />
               <div className="absolute -bottom-6 -left-6 bg-primary rounded-2xl p-6 shadow-xl">
                 <div className="text-center">
