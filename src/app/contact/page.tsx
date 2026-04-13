@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { PageHero } from "@/components/sections/PageHero";
+import { Footer } from "@/components/layout/Footer";
 
 export default function ContactPage() {
   const [form, setForm] = useState({ naam: "", email: "", telefoon: "", onderwerp: "", bericht: "" });
@@ -135,6 +136,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }
