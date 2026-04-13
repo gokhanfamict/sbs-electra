@@ -7,16 +7,16 @@ import { useState, useEffect } from "react";
 
 const heroImages = [
   {
-    url: "https://images.pexels.com/photos/5453818/pexels-photo-5453818.jpeg?w=1600&h=832&fit=crop",
+    url: "/images/electrician-working-switchboard-with-electrical-connection-cable-copy-space (1).jpg",
     alt: "Elektricien aan het werk"
   },
   {
-    url: "https://images.pexels.com/photos/5494925/pexels-photo-5494925.jpeg?w=1600&h=832&fit=crop",
-    alt: "Elektrische bedrading"
+    url: "/images/electrician-working-switchboard-with-electrical-connection-cable-copy-space.jpg",
+    alt: "Elektrische installatie"
   },
   {
-    url: "https://images.pexels.com/photos/5494939/pexels-photo-5494939.jpeg?w=1600&h=832&fit=crop",
-    alt: "Moderne elektra"
+    url: "/images/engineer-with-blueprints-standing-near-electrical-panel-blue-light-engineer-energy-control.jpg",
+    alt: "Engineer bij elektrisch paneel"
   }
 ];
 
