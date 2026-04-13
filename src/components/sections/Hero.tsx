@@ -30,13 +30,9 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+            className="text-5xl sm:text-6xl lg:text-8xl font-bold text-white mb-6 leading-tight tracking-tight whitespace-nowrap"
           >
-            Professionele
-            <span className="block bg-gradient-to-r from-accent to-[#00D9A8] bg-clip-text text-transparent">
-              Elektrotechnische
-            </span>
-            Installaties
+            Professionele Elektrotechnische Installaties
           </motion.h1>
 
           <motion.p
