@@ -7,16 +7,16 @@ import { useState, useEffect } from "react";
 
 const heroImages = [
   {
-    url: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1920&q=80",
+    url: "https://images.unsplash.com/photo-1627123424382-62d47e847112?w=1920&q=90",
+    alt: "Modern elektrisch paneel"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1558618047-f2f0c6a86e79?w=1920&q=90",
+    alt: "Professionele elektricien"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1595341882086-26d8d09f8f2d?w=1920&q=90",
     alt: "Elektrische installatie"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80",
-    alt: "Elektricien aan het werk"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1508504179250-2b5c39f3a7a4?w=1920&q=80",
-    alt: "Elektrisch werk"
   }
 ];
 
