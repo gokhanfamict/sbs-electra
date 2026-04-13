@@ -13,8 +13,8 @@ export default function DienstenPage() {
   return (
     <main>
       <PageHero 
-        title="Onze Diensten" 
-        subtitle="Van kleine reparatie tot complete installaties"
+        title="Onze Diensten"
+        subtitle="Elektra aanleg, renovatie, zonnepanelen, laadpalen en meer - wij zijn uw full-service partner voor alle elektrische installaties"
       />
       <section className="py-20 bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

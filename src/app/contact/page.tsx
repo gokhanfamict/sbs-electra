@@ -18,8 +18,8 @@ export default function ContactPage() {
   return (
     <main>
       <PageHero 
-        title="Neem Contact Op" 
-        subtitle="Vragen over onze diensten? Een offerte nodig? We helpen u graag verder."
+        title="Neem Contact Op"
+        subtitle="Heeft u een vraag of heeft u een offerte nodig? Onze specialisten staan klaar om u te helpen - 24/7 bereikbaar voor spoedgevallen"
       />
 
       <section className="py-20 bg-light">

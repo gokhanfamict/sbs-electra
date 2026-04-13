@@ -7,8 +7,8 @@ export default function BlogPage() {
   return (
     <main>
       <PageHero 
-        title="Blog" 
-        subtitle="Tips en nieuws over elektra en veiligheid"
+        title="Blog & Nieuws"
+        subtitle="Blijf op de hoogte van de nieuwste ontwikkelingen in elektrotechniek, veiligheidstips en bedrijfsnieuws van SBS Electra"
       />
       <section className="py-20 bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

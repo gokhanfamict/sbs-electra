@@ -46,8 +46,8 @@ export default function ProjectenPage() {
   return (
     <main>
       <PageHero 
-        title="Onze Projecten" 
-        subtitle="Bekijk onze recent voltooide projecten"
+        title="Onze Projecten"
+        subtitle="Van nieuwbouw tot renovatie - bekijk welke projecten wij de afgelopen jaren hebben gerealiseerd voor tevreden klanten"
       />
       <section className="py-20 bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

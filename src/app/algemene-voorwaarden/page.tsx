@@ -5,8 +5,8 @@ export default function AlgemeneVoorwaardenPage() {
   return (
     <main>
       <PageHero 
-        title="Algemene Voorwaarden" 
-        subtitle="De voorwaarden voor onze dienstverlening"
+        title="Algemene Voorwaarden"
+        subtitle="De standaard voorwaarden voor alle diensten van SBS Electra - transparant en eerlijk"
       />
       <section className="py-20 bg-light">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

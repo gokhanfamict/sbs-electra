@@ -35,7 +35,7 @@ export function PageHero({ title, subtitle, images }: PageHeroProps) {
   if (!mounted) return null;
 
   return (
-    <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 -z-10">
         {heroImages.length === 1 ? (
           <img
@@ -63,8 +63,8 @@ export function PageHero({ title, subtitle, images }: PageHeroProps) {
       <div className="absolute top-20 left-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24">
-        <div className="text-center max-w-4xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20">
+        <div className="text-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ export function PageHero({ title, subtitle, images }: PageHeroProps) {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg sm:text-xl text-white/70 max-w-2xl mx-auto"
+              className="text-lg sm:text-xl text-white/70 max-w-2xl mx-auto mb-10"
             >
               {subtitle}
             </motion.p>
