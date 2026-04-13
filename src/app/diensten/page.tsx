@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Zap, Home, Shield, Wrench, Plug, Sun } from "lucide-react";

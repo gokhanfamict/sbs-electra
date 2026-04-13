@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle } from "lucide-react";
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { services, getServiceBySlug } from "@/lib/data/services";
 import { Footer } from "@/components/layout/Footer";
@@ -18,10 +17,10 @@ export default function DienstDetailPage({ params }: { params: { slug: string } 
       <section className="py-20 bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link href="/diensten"><Button variant="ghost" className="mb-6"><ArrowLeft className="w-4 h-4 mr-2" />Terug</Button></Link>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <div>
             <h1 className="text-4xl font-bold text-primary mb-4">{dienst.title}</h1>
             <p className="text-gray-600 text-lg mb-8">{dienst.shortDescription}</p>
-          </motion.div>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 bg-white rounded-2xl p-8">
               <h2 className="text-2xl font-bold text-primary mb-6">Omschrijving</h2>
