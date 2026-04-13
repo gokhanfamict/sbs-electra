@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0">
+      <div className="fixed inset-0 -z-10">
         <img 
           src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1920&q=80" 
           alt="Elektrotechnische installatie" 
