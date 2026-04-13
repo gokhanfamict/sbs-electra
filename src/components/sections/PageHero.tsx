@@ -1,30 +1,62 @@
 "use client";
-import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
 interface PageHeroProps {
   title: string;
   subtitle?: string;
+  images?: string[];
 }
 
-export function PageHero({ title, subtitle }: PageHeroProps) {
+export function PageHero({ title, subtitle, images }: PageHeroProps) {
   const [mounted, setMounted] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
+  const defaultImages = [
+    "/images/electrician-working-switchboard-with-electrical-connection-cable-copy-space (1).jpg",
+    "/images/electrician-working-switchboard-with-electrical-connection-cable-copy-space.jpg",
+    "/images/engineer-with-blueprints-standing-near-electrical-panel-blue-light-engineer-energy-control.jpg"
+  ];
+
+  const heroImages = images || defaultImages;
+
+  useEffect(() => {
+    if (heroImages.length <= 1) return;
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [heroImages.length]);
+
   if (!mounted) return null;
 
   return (
-    <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-      <div className="fixed inset-0 -z-10">
-        <img 
-          src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1920&q=80" 
-          alt="Elektrotechnische installatie" 
-          className="w-full h-full object-cover"
-        />
+    <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 -z-10">
+        {heroImages.length === 1 ? (
+          <img
+            src={heroImages[0]}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={currentIndex}
+              src={heroImages[currentIndex]}
+              alt={title}
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              className="w-full h-full object-cover"
+            />
+          </AnimatePresence>
+        )}
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/70" />
       </div>
 
@@ -55,20 +87,17 @@ export function PageHero({ title, subtitle }: PageHeroProps) {
         </div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.8, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2"
-        >
-          <div className="w-1.5 h-3 bg-white/50 rounded-full" />
-        </motion.div>
-      </motion.div>
+      {heroImages.length > 1 && (
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
+          {heroImages.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentIndex(i)}
+              className={`w-2 h-2 rounded-full transition-all ${i === currentIndex ? 'bg-accent w-6' : 'bg-white/30'}`}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 }
