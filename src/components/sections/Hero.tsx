@@ -14,23 +14,13 @@ export function Hero() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20">
         <div className="text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8"
-          >
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2 rounded-full text-sm text-white/90 mb-8">
-              <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse" />
-              24/7 Storingsdienst Beschikbaar
-            </div>
-          </motion.div>
+
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl sm:text-6xl lg:text-8xl font-bold text-white mb-6 leading-tight tracking-tight whitespace-nowrap"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight tracking-tight"
           >
             Professionele Elektrotechnische Installaties
           </motion.h1>
