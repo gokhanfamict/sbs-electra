@@ -53,15 +53,15 @@ export function Process() {
               transition={{ delay: i * 0.15 }}
               className="relative"
             >
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-colors">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-colors h-full flex flex-col">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
                     <step.icon className="w-6 h-6 text-accent" />
                   </div>
-                  <span className="text-4xl font-bold text-white/20">{step.number}</span>
+                  <span className="text-4xl font-bold text-white/30 tabular-nums">{step.number}</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                <p className="text-white/70 text-sm">{step.description}</p>
+                <p className="text-white/70 text-sm mt-auto">{step.description}</p>
               </div>
               {i < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-accent/40" />

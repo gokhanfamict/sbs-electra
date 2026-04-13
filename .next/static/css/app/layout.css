@@ -711,6 +711,9 @@ video {
 .mt-1 {
   margin-top: 0.25rem;
 }
+.mt-auto {
+  margin-top: auto;
+}
 .block {
   display: block;
 }
@@ -1300,6 +1303,10 @@ video {
 .italic {
   font-style: italic;
 }
+.tabular-nums {
+  --tw-numeric-spacing: tabular-nums;
+  font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
+}
 .leading-tight {
   line-height: 1.25;
 }
@@ -1351,6 +1358,9 @@ video {
 }
 .text-white\/20 {
   color: rgb(255 255 255 / 0.2);
+}
+.text-white\/30 {
+  color: rgb(255 255 255 / 0.3);
 }
 .opacity-20 {
   opacity: 0.2;
