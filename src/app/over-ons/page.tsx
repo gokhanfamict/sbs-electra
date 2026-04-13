@@ -1,13 +1,17 @@
 import { Footer } from "@/components/layout/Footer";
+import { PageHero } from "@/components/sections/PageHero";
 
 export const metadata = { title: "Over Ons | SBS Electra" };
 
 export default function OverOnsPage() {
   return (
-    <main className="pt-20">
+    <main>
+      <PageHero 
+        title="Over SBS Electra" 
+        subtitle="Uw betrouwbare partner voor elektrotechnische installaties"
+      />
       <section className="py-20 bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl font-bold text-primary text-center mb-12">Over SBS Electra</h1>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h2 className="text-2xl font-bold text-primary mb-6">Ons Verhaal</h2>

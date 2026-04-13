@@ -6,17 +6,18 @@ import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { services } from "@/lib/data/services";
 import { Footer } from "@/components/layout/Footer";
+import { PageHero } from "@/components/sections/PageHero";
 
 export default function DienstenPage() {
   const iconMap: Record<string, React.ElementType> = { Zap, Home, Shield, Wrench, Plug, Sun };
   return (
-    <main className="pt-20">
+    <main>
+      <PageHero 
+        title="Onze Diensten" 
+        subtitle="Van kleine reparatie tot complete installaties"
+      />
       <section className="py-20 bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
-            <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-4">Onze Diensten</h1>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">Van kleine reparatie tot complete installaties.</p>
-          </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((dienst, i) => {
               const Icon = iconMap[dienst.slug.split("-")[0]] || Zap;

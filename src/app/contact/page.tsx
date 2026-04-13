@@ -1,10 +1,11 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, Zap, ArrowRight, MessageCircle, Send, CheckCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Zap, ArrowRight, Send, CheckCircle } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { PageHero } from "@/components/sections/PageHero";
 
 export default function ContactPage() {
   const [form, setForm] = useState({ naam: "", email: "", telefoon: "", onderwerp: "", bericht: "" });
@@ -15,22 +16,13 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="pt-20">
-      <section className="relative py-24 bg-gradient-to-br from-primary via-primary to-[#0d2137] overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnMxLjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptMCAxOGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiIGZpbGw9IiMiNDMyMzcwIi8+PC9nPjwvc3ZnPg==')] opacity-20" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <MessageCircle className="w-4 h-4" />
-              Klaar om te beginnen?
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">Neem Contact Op</h1>
-            <p className="text-white/70 max-w-2xl mx-auto text-lg">Vragen over onze diensten? Een offerte nodig? We helpen u graag verder.</p>
-          </motion.div>
-        </div>
-      </section>
+    <main>
+      <PageHero 
+        title="Neem Contact Op" 
+        subtitle="Vragen over onze diensten? Een offerte nodig? We helpen u graag verder."
+      />
 
-      <section className="py-20 -mt-12 relative z-10">
+      <section className="py-20 bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="lg:col-span-2">
