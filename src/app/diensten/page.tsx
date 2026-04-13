@@ -7,8 +7,6 @@ import { Button } from "@/components/ui/button";
 import { services } from "@/lib/data/services";
 import { Footer } from "@/components/layout/Footer";
 
-export const metadata = { title: "Diensten | SBS Electra", description: "Bekijk alle diensten van SBS Electra." };
-
 export default function DienstenPage() {
   const iconMap: Record<string, React.ElementType> = { Zap, Home, Shield, Wrench, Plug, Sun };
   return (
