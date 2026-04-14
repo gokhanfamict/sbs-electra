@@ -67,11 +67,11 @@ export function PageHero({ title, subtitle, images, showFeatures = true }: PageH
               />
             </AnimatePresence>
           )}
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/70" />
         </div>
 
-        <div className="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 pb-12">
           <div className="text-center max-w-4xl mx-auto">
@@ -103,9 +103,9 @@ export function PageHero({ title, subtitle, images, showFeatures = true }: PageH
                 className="flex flex-wrap justify-center gap-4 mb-10"
               >
                 {features.map((feature, i) => (
-                  <div key={i} className="flex items-center gap-2 bg-accent text-white px-4 py-2 rounded-full font-medium">
-                    <feature.icon className="w-5 h-5" />
-                    <span className="text-sm">{feature.text}</span>
+                  <div key={i} className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full">
+                    <feature.icon className="w-5 h-5 text-accent" />
+                    <span className="text-white text-sm font-medium">{feature.text}</span>
                   </div>
                 ))}
               </motion.div>
@@ -127,7 +127,7 @@ export function PageHero({ title, subtitle, images, showFeatures = true }: PageH
       </div>
 
       {showFeatures && (
-        <div className="bg-gradient-to-r from-primary to-primary/80 py-16">
+        <div className="bg-gradient-to-r from-primary via-primary/95 to-primary py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
@@ -155,7 +155,7 @@ export function PageHero({ title, subtitle, images, showFeatures = true }: PageH
                   transition={{ delay: i * 0.1 }}
                   className="text-center p-6"
                 >
-                  <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-8 h-8 text-accent" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>

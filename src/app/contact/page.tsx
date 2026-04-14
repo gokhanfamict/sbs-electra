@@ -77,7 +77,7 @@ export default function ContactPage() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="space-y-6">
-              <div className="bg-gradient-to-br from-primary to-[#0d2137] rounded-3xl p-8 text-white">
+              <div className="bg-gradient-to-br from-primary to-primary/80 rounded-3xl p-8 text-white">
                 <h3 className="text-xl font-bold mb-6">Direct Contact</h3>
                 <ul className="space-y-5">
                   <li className="flex items-start gap-4">

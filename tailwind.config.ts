@@ -4,8 +4,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: { 
-        primary: "#202020", 
-        accent: "#dd1a12", 
+        primary: "#0A192F", 
+        accent: "#00C2A8", 
         light: "#F8F9FA", 
         "text-dark": "#333333" 
       },
