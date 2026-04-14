@@ -3,6 +3,8 @@ import { PageHero } from "@/components/sections/PageHero";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { Process } from "@/components/sections/Process";
 import { CTABanner } from "@/components/sections/CTABanner";
+import { motion } from "framer-motion";
+import { CheckCircle, Award, Clock, Shield, Zap, Users } from "lucide-react";
 
 const heroImages = [
   "/images/electrician-working-switchboard-with-electrical-connection-cable-copy-space (1).jpg",
@@ -19,11 +21,12 @@ export default function OverOnsPage() {
         title="Over SBS Electra" 
         subtitle="Uw betrouwbare partner voor elektrotechnische installaties"
         images={heroImages}
+        showFeatures={true}
       />
       
       <section className="py-20 bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-primary mb-6">Ons Verhaal</h2>
               <p className="text-gray-600 mb-4">
@@ -51,26 +54,12 @@ export default function OverOnsPage() {
               </div>
             </div>
           </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { value: "500+", label: "Projecten" },
-              { value: "15+", label: "Jaar Ervaring" },
-              { value: "100%", label: "Gecertificeerd" },
-              { value: "24/7", label: "Bereikbaar" },
-            ].map((stat, i) => (
-              <div key={i} className="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition-shadow">
-                <span className="text-3xl font-bold text-primary">{stat.value}</span>
-                <p className="text-gray-600 text-sm mt-1">{stat.label}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
-      <WhyUs dark />
+      <WhyUs />
       <Process />
-      <CTABanner />
+      <CTABanner dark={false} />
       <Footer />
     </main>
   );

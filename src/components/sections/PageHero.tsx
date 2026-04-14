@@ -10,7 +10,7 @@ interface PageHeroProps {
   showFeatures?: boolean;
 }
 
-export function PageHero({ title, subtitle, images, showFeatures = true }: PageHeroProps) {
+export function PageHero({ title, subtitle, images, showFeatures = false }: PageHeroProps) {
   const [mounted, setMounted] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
