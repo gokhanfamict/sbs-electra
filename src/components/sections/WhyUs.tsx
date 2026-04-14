@@ -27,7 +27,7 @@ export function WhyUs() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }} 
@@ -47,7 +47,7 @@ export function WhyUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="text-center p-6 rounded-2xl bg-light hover:bg-primary/5 transition-colors"
+              className="text-center p-6 rounded-2xl bg-white hover:shadow-lg transition-all"
             >
               <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <reason.icon className="w-8 h-8 text-primary" />

@@ -6,7 +6,7 @@ import { testimonials } from "@/lib/data/testimonials";
 
 export function Testimonials() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Wat Onze Klanten Zeggen</h2>

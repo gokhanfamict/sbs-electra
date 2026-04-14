@@ -12,12 +12,12 @@ export default function HomePage() {
     <>
       <Hero />
       <Intro />
-      <WhyUs />
       <Certifications />
+      <WhyUs />
       <Process />
       <Services />
-      <Testimonials />
       <CTABanner />
+      <Testimonials />
     </>
   );
 }
