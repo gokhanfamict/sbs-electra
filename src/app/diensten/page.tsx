@@ -7,6 +7,9 @@ import { Button } from "@/components/ui/button";
 import { services } from "@/lib/data/services";
 import { Footer } from "@/components/layout/Footer";
 import { PageHero } from "@/components/sections/PageHero";
+import { WhyUs } from "@/components/sections/WhyUs";
+import { Process } from "@/components/sections/Process";
+import { CTABanner } from "@/components/sections/CTABanner";
 
 export default function DienstenPage() {
   const iconMap: Record<string, React.ElementType> = { Zap, Home, Shield, Wrench, Plug, Sun };
@@ -16,8 +19,14 @@ export default function DienstenPage() {
         title="Onze Diensten"
         subtitle="Elektra aanleg, renovatie, zonnepanelen, laadpalen en meer - wij zijn uw full-service partner voor alle elektrische installaties"
       />
+      
       <section className="py-20 bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Wat Wij Doen</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">Van kleine reparatie tot complete installaties - wij leveren vakwerk voor elke klus.</p>
+          </motion.div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((dienst, i) => {
               const Icon = iconMap[dienst.slug.split("-")[0]] || Zap;
@@ -58,6 +67,10 @@ export default function DienstenPage() {
           </div>
         </div>
       </section>
+
+      <WhyUs />
+      <Process />
+      <CTABanner />
       <Footer />
     </main>
   );

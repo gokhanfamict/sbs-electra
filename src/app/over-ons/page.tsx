@@ -1,5 +1,8 @@
 import { Footer } from "@/components/layout/Footer";
 import { PageHero } from "@/components/sections/PageHero";
+import { WhyUs } from "@/components/sections/WhyUs";
+import { Process } from "@/components/sections/Process";
+import { CTABanner } from "@/components/sections/CTABanner";
 
 const heroImages = [
   "/images/electrician-working-switchboard-with-electrical-connection-cable-copy-space (1).jpg",
@@ -17,6 +20,7 @@ export default function OverOnsPage() {
         subtitle="Uw betrouwbare partner voor elektrotechnische installaties"
         images={heroImages}
       />
+      
       <section className="py-20 bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
@@ -26,10 +30,10 @@ export default function OverOnsPage() {
                 SBS Electra is opgericht met een simpele missie: de beste elektrotechnische service bieden voor een eerlijke prijs. Wat begon als een eenmanszaak is gegroeid tot een team van ervaren monteurs die klaar staan voor klussen van elke omvang.
               </p>
               <p className="text-gray-600 mb-4">
-                Onze monteurs zijn VCA-gecertificeerd en volgen jaarlijks scholingen om up-to-date te blijven met de nieuwste technieken en veiligheidsnormen. Van NEN 1010 inspecties tot smart home installaties - wij hebben de expertise in huis.
+                Onze monteurs zijn VCA-gecertificeerd en volgen jaarlijks scholingen om up-to-date te blijven met de nieuwste technieken en veiligheidsnormen. Van NEN 3140 inspecties tot smart home installaties - wij hebben de expertise in huis.
               </p>
               <p className="text-gray-600">
-                Wij geloven in duurzame relaties met onze klanten. Daarom staan wij bekend om onze betrouwbaarheid, eerlijke prijzen en uitstekende service. Elk project wordt met dezelfde zorg en precisie uitgevoerd, of het nu gaat om een simpel stopcontact of een complete nieuwbouwinstallatie.
+                Wij geloven in duurzame relaties met onze klanten. Daarom staan wij bekend om onze betrouwbaarheid, eerlijke prijzen en uitstekende service.
               </p>
             </div>
             <div className="relative">
@@ -39,7 +43,7 @@ export default function OverOnsPage() {
                 alt="SBS Electra team"
                 className="rounded-2xl shadow-xl w-full relative z-0"
               />
-              <div className="absolute -bottom-6 -left-6 bg-primary rounded-2xl p-6 shadow-xl">
+              <div className="absolute -bottom-6 -left-6 bg-primary rounded-2xl p-6 shadow-xl z-20">
                 <div className="text-center">
                   <span className="text-4xl font-bold text-accent">15+</span>
                   <p className="text-white text-sm">Jaar Ervaring</p>
@@ -48,7 +52,7 @@ export default function OverOnsPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { value: "500+", label: "Projecten" },
               { value: "15+", label: "Jaar Ervaring" },
@@ -61,57 +65,12 @@ export default function OverOnsPage() {
               </div>
             ))}
           </div>
-
-          <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-sm mb-20">
-            <h2 className="text-3xl font-bold text-primary mb-8 text-center">Onze Certificeringen</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                { name: "NEN 3140", desc: "Inspectie elektrische installaties" },
-                { name: "NEN 1010", desc: "Elektrische installaties" },
-                { name: "VCA", desc: "Veilig werken" },
-              ].map((cert, i) => (
-                <div key={i} className="text-center p-6 border-2 border-light rounded-xl hover:border-accent transition-colors">
-                  <span className="text-2xl font-bold text-primary">{cert.name}</span>
-                  <p className="text-gray-500 text-sm mt-2">{cert.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <h3 className="text-2xl font-bold text-primary mb-4">Onze Waarden</h3>
-              <ul className="space-y-4">
-                {[
-                  "Veiligheid voorop - geen compromissen",
-                  "Eerlijkheid en transparantie",
-                  "Kwaliteit in elk detail",
-                  "Klanttevredenheid is onze prioriteit"
-                ].map((value, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <div className="w-2 h-2 rounded-full bg-accent" />
-                    </div>
-                    <span className="text-gray-600">{value}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-primary rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Werken Bij SBS Electra</h3>
-              <p className="text-white/70 mb-6">
-                Ben jij een ervaren elektricien of wil je het vak leren? Wij zijn altijd op zoek naar gemotiveerde collega's die willen groeien in hun vak.
-              </p>
-              <ul className="space-y-2 text-white/70">
-                <li>• Uitstekende arbeidsvoorwaarden</li>
-                <li>• Scholings- en opleidingsmogelijkheden</li>
-                <li>• Gezellig team met korte lijnen</li>
-                <li>• Afwisselende projecten</li>
-              </ul>
-            </div>
-          </div>
         </div>
       </section>
+
+      <WhyUs />
+      <Process />
+      <CTABanner />
       <Footer />
     </main>
   );

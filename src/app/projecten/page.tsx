@@ -1,5 +1,8 @@
 import { Footer } from "@/components/layout/Footer";
 import { PageHero } from "@/components/sections/PageHero";
+import { WhyUs } from "@/components/sections/WhyUs";
+import { Process } from "@/components/sections/Process";
+import { CTABanner } from "@/components/sections/CTABanner";
 
 const projecten = [
   {
@@ -33,8 +36,8 @@ const projecten = [
     category: "Domotica"
   },
   {
-    title: "Kantoorpand NEN 1010 Keuring",
-    description: "Periodieke inspectie en certificering volgens NEN 1010 norm.",
+    title: "Kantoorpand NEN 3140 Keuring",
+    description: "Periodieke inspectie en certificering volgens NEN 3140 norm.",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
     category: "Keuring"
   }
@@ -49,8 +52,14 @@ export default function ProjectenPage() {
         title="Onze Projecten"
         subtitle="Van nieuwbouw tot renovatie - bekijk welke projecten wij de afgelopen jaren hebben gerealiseerd voor tevreden klanten"
       />
+      
       <section className="py-20 bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Recente Projecten</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">Wij hebben al honderden projecten succesvol afgerond. Hier zijn enkele voorbeelden van ons werk.</p>
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {projecten.map((project, i) => (
               <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
@@ -75,6 +84,10 @@ export default function ProjectenPage() {
           </div>
         </div>
       </section>
+
+      <WhyUs />
+      <Process />
+      <CTABanner />
       <Footer />
     </main>
   );
