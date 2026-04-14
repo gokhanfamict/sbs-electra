@@ -64,12 +64,11 @@ export default function OverOnsPage() {
 
           <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-sm mb-20">
             <h2 className="text-3xl font-bold text-primary mb-8 text-center">Onze Certificeringen</h2>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
+                { name: "NEN 3140", desc: "Inspectie elektrische installaties" },
+                { name: "NEN 1010", desc: "Elektrische installaties" },
                 { name: "VCA", desc: "Veilig werken" },
-                { name: "NEN 1010", desc: "Elektrische norm" },
-                { name: "Stek", desc: "Erkend installateur" },
-                { name: "REO", desc: "Laadpaal erkend" },
               ].map((cert, i) => (
                 <div key={i} className="text-center p-6 border-2 border-light rounded-xl hover:border-accent transition-colors">
                   <span className="text-2xl font-bold text-primary">{cert.name}</span>

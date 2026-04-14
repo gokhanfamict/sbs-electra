@@ -3,10 +3,9 @@ import { motion } from "framer-motion";
 
 export function Certifications() {
   const certs = [
+    { name: "NEN 3140", desc: "Inspectie elektrische installaties" },
+    { name: "NEN 1010", desc: "Elektrische installaties" },
     { name: "VCA", desc: "Veilig werken" },
-    { name: "NEN 1010", desc: "Elektrische norm" },
-    { name: "Stek", desc: "Erkend installateur" },
-    { name: "REO", desc: "Laadpaal erkend" },
   ];
 
   return (
