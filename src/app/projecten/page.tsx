@@ -85,7 +85,7 @@ export default function ProjectenPage() {
         </div>
       </section>
 
-      <WhyUs />
+      <WhyUs dark />
       <Process />
       <CTABanner />
       <Footer />

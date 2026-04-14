@@ -30,7 +30,7 @@ export default function PrivacybeleidPage() {
         </div>
       </section>
 
-      <WhyUs />
+      <WhyUs dark />
       <Process />
       <CTABanner />
       <Footer />

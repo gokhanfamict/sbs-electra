@@ -68,7 +68,7 @@ export default function OverOnsPage() {
         </div>
       </section>
 
-      <WhyUs />
+      <WhyUs dark />
       <Process />
       <CTABanner />
       <Footer />

@@ -1,7 +1,7 @@
-"use client";
+'use client';
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, Zap, ArrowRight, Send, CheckCircle, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Zap, ArrowRight, Send, CheckCircle } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -10,12 +10,42 @@ import { WhyUs } from "@/components/sections/WhyUs";
 import { Process } from "@/components/sections/Process";
 import { Footer } from "@/components/layout/Footer";
 
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xpwzgqvn';
+
 export default function ContactPage() {
   const [form, setForm] = useState({ naam: "", email: "", telefoon: "", onderwerp: "", bericht: "" });
   const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = (e: React.FormEvent) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          naam: form.naam,
+          email: form.email,
+          telefoon: form.telefoon,
+          onderwerp: form.onderwerp,
+          bericht: form.bericht
+        })
+      });
+      
+      if (response.ok) {
+        setSubmitted(true);
+        setForm({ naam: "", email: "", telefoon: "", onderwerp: "", bericht: "" });
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -71,9 +101,9 @@ export default function ContactPage() {
                     <label className="text-sm font-semibold text-gray-700">Bericht *</label>
                     <Textarea placeholder="Vertel ons over uw project of vraag..." required value={form.bericht} onChange={(e) => setForm({...form, bericht: e.target.value})} className="min-h-[140px] rounded-xl border-gray-200 focus:border-accent focus:ring-accent/20 resize-none" />
                   </div>
-                  <Button type="submit" className="w-full h-14 bg-accent hover:bg-accent/90 text-primary font-semibold rounded-xl group">
-                    Verstuur bericht
-                    <Send className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <Button type="submit" disabled={loading} className="w-full h-14 bg-accent hover:bg-accent/90 text-primary font-semibold rounded-xl group disabled:opacity-50">
+                    {loading ? 'Verzenden...' : 'Verstuur bericht'}
+                    {!loading && <Send className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />}
                   </Button>
                 </form>
               )}
@@ -142,7 +172,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <WhyUs />
+      <WhyUs dark />
       <Process />
       <Footer />
     </main>

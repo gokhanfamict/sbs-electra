@@ -40,7 +40,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <WhyUs />
+      <WhyUs dark />
       <Process />
       <CTABanner />
       <Footer />

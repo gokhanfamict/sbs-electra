@@ -78,7 +78,7 @@ export default function DienstDetailPage({ params }: { params: { slug: string } 
         </div>
       </section>
 
-      <WhyUs />
+      <WhyUs dark />
       <Process />
       <CTABanner />
       <Footer />

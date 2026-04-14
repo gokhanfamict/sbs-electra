@@ -1,5 +1,14 @@
 {
-  "/page": "app/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/algemene-voorwaarden/page": "app/algemene-voorwaarden/page.js",
+  "/contact/page": "app/contact/page.js",
   "/diensten/page": "app/diensten/page.js",
-  "/diensten/[slug]/page": "app/diensten/[slug]/page.js"
+  "/privacybeleid/page": "app/privacybeleid/page.js",
+  "/page": "app/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/diensten/[slug]/page": "app/diensten/[slug]/page.js",
+  "/projecten/page": "app/projecten/page.js",
+  "/over-ons/page": "app/over-ons/page.js",
+  "/blog/page": "app/blog/page.js"
 }
