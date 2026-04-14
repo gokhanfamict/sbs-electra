@@ -5,6 +5,7 @@ import { Process } from "@/components/sections/Process";
 import { Services } from "@/components/sections/Services";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { CTABanner } from "@/components/sections/CTABanner";
+import { Certifications } from "@/components/sections/Certifications";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Hero />
       <Intro />
       <WhyUs />
+      <Certifications />
       <Process />
       <Services />
       <Testimonials />
