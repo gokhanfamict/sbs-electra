@@ -9,6 +9,7 @@ import { Hero } from "@/components/sections/Hero";
 import { FeaturesSectie } from "@/components/sections/FeaturesSectie";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { Process } from "@/components/sections/Process";
+import { CTABanner } from "@/components/sections/CTABanner";
 
 const heroImages = [
   { url: "/images/electrician-working-switchboard-with-electrical-connection-cable-copy-space (1).jpg", alt: "Elektricien aan het werk" },
@@ -68,8 +69,6 @@ export default function ContactPage() {
         bullets={bullets}
         images={heroImages}
       />
-
-      <FeaturesSectie />
 
       <section className="py-20 bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -188,8 +187,10 @@ export default function ContactPage() {
         </div>
       </section>
 
+      <FeaturesSectie dark />
       <WhyUs />
       <Process />
+      <CTABanner dark={false} />
     </main>
   );
 }
