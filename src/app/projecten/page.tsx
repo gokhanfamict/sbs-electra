@@ -20,39 +20,39 @@ const projecten = [
   {
     title: "Nieuwbouw Woonhuis Amstelveen",
     description: "Complete elektrische installatie voor een luxe nieuwbouwwoning van 180m².",
-    image: "https://images.unsplash.com/photo-1508504179250-2b5c39f3a7a4?w=800&q=80",
+    image: "/images/1. new house electrical wiring.jpg",
     category: "Nieuwbouw"
-  },
-  {
-    title: "Zonnepanelen Installatie Badhoevedorp",
-    description: "12 zonnepanelen met hybrid omvormer voor een optimaal rendement.",
-    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80",
-    category: "Zonnepanelen"
-  },
-  {
-    title: "Laadpaal Bedrijfspand Schiphol-Rijk",
-    description: "4 laadpalen voor werknemers en bezoekers van een logistiek bedrijf.",
-    image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80",
-    category: "Laadpalen"
   },
   {
     title: "Renovatie Historisch Pand Amsterdam",
     description: "Modernisering van de elektrische installatie in een monumentaal pand.",
-    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a4b5c?w=800&q=80",
+    image: "/images/2. house renovation electrical.jpg",
     category: "Renovatie"
   },
   {
-    title: "Smart Home Integratie Hilversum",
-    description: "Volledige domotica installatie met verlichting, verwarming en beveiliging.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
-    category: "Domotica"
+    title: "Storingsdienst Particulier Badhoevedorp",
+    description: "Spoedreparatie na stroomuitval bij een woning.",
+    image: "/images/3. electrician repair switchboard.jpg",
+    category: "Storingsdienst"
   },
   {
-    title: "Kantoorpand NEN 3140 Keuring",
-    description: "Periodieke inspectie en certificering volgens NEN 3140 norm.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    title: "Periodieke Keuring Bedrijfspand",
+    description: "NEN 3140 inspectie en certificering voor een zakelijk pand.",
+    image: "/images/4. electrical inspection.jpg",
     category: "Keuring"
-  }
+  },
+  {
+    title: "Laadpaal Installatie Woonhuis",
+    description: "Wallbox installatie voor een elektrische auto.",
+    image: "/images/5. EV charging station.jpg",
+    category: "Laadpalen"
+  },
+  {
+    title: "Smart Home Integratie",
+    description: "Volledige domotica installatie met verlichting en verwarming.",
+    image: "/images/6. smart home technology.jpg",
+    category: "Domotica"
+  },
 ];
 
 export const metadata = { title: "Projecten | SBS Electra" };
@@ -66,8 +66,6 @@ export default function ProjectenPage() {
         bullets={bullets}
         images={heroImages}
       />
-      
-      <FeaturesSectie />
       
       <section className="py-20 bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -101,9 +99,10 @@ export default function ProjectenPage() {
         </div>
       </section>
 
+      <FeaturesSectie dark />
       <WhyUs />
       <Process />
-      <CTABanner />
+      <CTABanner dark={false} />
     </main>
   );
 }
