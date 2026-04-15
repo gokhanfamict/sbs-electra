@@ -1,4 +1,3 @@
-import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { FeaturesSectie } from "@/components/sections/FeaturesSectie";
 import { WhyUs } from "@/components/sections/WhyUs";
@@ -105,7 +104,6 @@ export default function ProjectenPage() {
       <WhyUs />
       <Process />
       <CTABanner />
-      <Footer />
     </main>
   );
 }

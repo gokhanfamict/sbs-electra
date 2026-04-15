@@ -5,7 +5,6 @@ import { ArrowRight, Zap, Home, Shield, Wrench, Plug, Sun } from "lucide-react";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { services } from "@/lib/data/services";
-import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { FeaturesSectie } from "@/components/sections/FeaturesSectie";
 import { WhyUs } from "@/components/sections/WhyUs";
@@ -87,7 +86,6 @@ export default function DienstenPage() {
       <WhyUs />
       <Process />
       <CTABanner />
-      <Footer />
     </main>
   );
 }

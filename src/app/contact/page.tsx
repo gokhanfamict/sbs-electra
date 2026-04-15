@@ -9,7 +9,6 @@ import { Hero } from "@/components/sections/Hero";
 import { FeaturesSectie } from "@/components/sections/FeaturesSectie";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { Process } from "@/components/sections/Process";
-import { Footer } from "@/components/layout/Footer";
 
 const heroImages = [
   { url: "/images/electrician-working-switchboard-with-electrical-connection-cable-copy-space (1).jpg", alt: "Elektricien aan het werk" },
@@ -191,7 +190,6 @@ export default function ContactPage() {
 
       <WhyUs />
       <Process />
-      <Footer />
     </main>
   );
 }
