@@ -31,7 +31,7 @@ export default function OverOnsPage() {
       
       <section className="py-20 bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h2 className="text-3xl font-bold text-primary mb-6">Ons Verhaal</h2>
               <p className="text-gray-600 mb-4">
@@ -40,8 +40,11 @@ export default function OverOnsPage() {
               <p className="text-gray-600 mb-4">
                 Onze monteurs zijn VCA-gecertificeerd en volgen jaarlijks scholingen om up-to-date te blijven met de nieuwste technieken en veiligheidsnormen. Van NEN 3140 inspecties tot smart home installaties - wij hebben de expertise in huis.
               </p>
+              <p className="text-gray-600 mb-4">
+                Wij geloven in duurzame relaties met onze klanten. Daarom staan wij bekend om onze betrouwbaarheid, eerlijke prijzen en uitstekende service. Elke opdracht pakken wij aan met dezelfde toewijding, of het nu gaat om een klein reparatietje of een heel nieuwbouwproject.
+              </p>
               <p className="text-gray-600">
-                Wij geloven in duurzame relaties met onze klanten. Daarom staan wij bekend om onze betrouwbaarheid, eerlijke prijzen en uitstekende service.
+                Ons werkgebied omvat de gehele regio Amsterdam en omstreken. Wij zijn trots op onze reputatie en werken hard om deze te behouden. Bij SBS Electra bent u verzekerd van vakwerk, eerlijke prijzen en een team dat voor u klaar staat.
               </p>
             </div>
             <div className="relative">
@@ -49,7 +52,7 @@ export default function OverOnsPage() {
               <img 
                 src="/images/Overons.jpg" 
                 alt="SBS Electra team"
-                className="rounded-2xl shadow-xl w-full relative z-0"
+                className="rounded-2xl shadow-xl w-full relative z-0 max-h-[500px] object-cover"
               />
               <div className="absolute -bottom-6 -left-6 bg-primary rounded-2xl p-6 shadow-xl z-20">
                 <div className="text-center">
@@ -58,6 +61,20 @@ export default function OverOnsPage() {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { value: "500+", label: "Projecten" },
+              { value: "15+", label: "Jaar Ervaring" },
+              { value: "100%", label: "Gecertificeerd" },
+              { value: "24/7", label: "Bereikbaar" },
+            ].map((stat, i) => (
+              <div key={i} className="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition-shadow">
+                <span className="text-3xl font-bold text-primary">{stat.value}</span>
+                <p className="text-gray-600 text-sm mt-1">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
