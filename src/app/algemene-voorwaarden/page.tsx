@@ -1,16 +1,33 @@
 import { Footer } from "@/components/layout/Footer";
-import { PageHero } from "@/components/sections/PageHero";
+import { Hero } from "@/components/sections/Hero";
+import { FeaturesSectie } from "@/components/sections/FeaturesSectie";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { Process } from "@/components/sections/Process";
 import { CTABanner } from "@/components/sections/CTABanner";
 
+const heroImages = [
+  { url: "/images/electrician-working-switchboard-with-electrical-connection-cable-copy-space (1).jpg", alt: "Elektricien aan het werk" },
+  { url: "/images/electrician-working-switchboard-with-electrical-connection-cable-copy-space.jpg", alt: "Elektrische installatie" },
+  { url: "/images/engineer-with-blueprints-standing-near-electrical-panel-blue-light-engineer-energy-control.jpg", alt: "Engineer bij elektrisch paneel" }
+];
+
+const bullets = [
+  "Transparant en eerlijk",
+  "Snelle levering",
+  "Garantie op werk",
+];
+
 export default function AlgemeneVoorwaardenPage() {
   return (
     <main>
-      <PageHero 
+      <Hero 
         title="Algemene Voorwaarden"
-        subtitle="De standaard voorwaarden voor alle diensten van SBS Electra - transparant en eerlijk"
+        description="De standaard voorwaarden voor alle diensten van SBS Electra - transparant en eerlijk"
+        bullets={bullets}
+        images={heroImages}
       />
+      
+      <FeaturesSectie />
       
       <section className="py-20 bg-light">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,7 +50,7 @@ export default function AlgemeneVoorwaardenPage() {
         </div>
       </section>
 
-      <WhyUs dark />
+      <WhyUs />
       <Process />
       <CTABanner />
       <Footer />

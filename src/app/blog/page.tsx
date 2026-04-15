@@ -1,18 +1,35 @@
 import { Footer } from "@/components/layout/Footer";
-import { PageHero } from "@/components/sections/PageHero";
+import { Hero } from "@/components/sections/Hero";
+import { FeaturesSectie } from "@/components/sections/FeaturesSectie";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { Process } from "@/components/sections/Process";
 import { CTABanner } from "@/components/sections/CTABanner";
+
+const heroImages = [
+  { url: "/images/electrician-working-switchboard-with-electrical-connection-cable-copy-space (1).jpg", alt: "Elektricien aan het werk" },
+  { url: "/images/electrician-working-switchboard-with-electrical-connection-cable-copy-space.jpg", alt: "Elektrische installatie" },
+  { url: "/images/engineer-with-blueprints-standing-near-electrical-panel-blue-light-engineer-energy-control.jpg", alt: "Engineer bij elektrisch paneel" }
+];
+
+const bullets = [
+  "Updates over elektrotechniek",
+  "Tips en tricks voor uw installatie",
+  "Veiligheidsadvies en normen",
+];
 
 export const metadata = { title: "Blog | SBS Electra" };
 
 export default function BlogPage() {
   return (
     <main>
-      <PageHero 
+      <Hero 
         title="Blog & Nieuws"
-        subtitle="Blijf op de hoogte van de nieuwste ontwikkelingen in elektrotechniek, veiligheidstips en bedrijfsnieuws van SBS Electra"
+        description="Blijf op de hoogte van de nieuwste ontwikkelingen in elektrotechniek, veiligheidstips en bedrijfsnieuws van SBS Electra"
+        bullets={bullets}
+        images={heroImages}
       />
+      
+      <FeaturesSectie />
       
       <section className="py-20 bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,7 +57,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <WhyUs dark />
+      <WhyUs />
       <Process />
       <CTABanner />
       <Footer />

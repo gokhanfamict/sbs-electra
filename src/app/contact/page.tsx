@@ -1,14 +1,27 @@
 'use client';
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, Zap, ArrowRight, Send, CheckCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Zap, ArrowRight, Send, Shield, CheckCircle } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { PageHero } from "@/components/sections/PageHero";
+import { Hero } from "@/components/sections/Hero";
+import { FeaturesSectie } from "@/components/sections/FeaturesSectie";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { Process } from "@/components/sections/Process";
 import { Footer } from "@/components/layout/Footer";
+
+const heroImages = [
+  { url: "/images/electrician-working-switchboard-with-electrical-connection-cable-copy-space (1).jpg", alt: "Elektricien aan het werk" },
+  { url: "/images/electrician-working-switchboard-with-electrical-connection-cable-copy-space.jpg", alt: "Elektrische installatie" },
+  { url: "/images/engineer-with-blueprints-standing-near-electrical-panel-blue-light-engineer-energy-control.jpg", alt: "Engineer bij elektrisch paneel" }
+];
+
+const bullets = [
+  "Gratis en vrijblijvende offerte",
+  "Binnen 24 uur reactie",
+  "Geen verborgen kosten",
+];
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xpwzgqvn';
 
@@ -50,10 +63,14 @@ export default function ContactPage() {
 
   return (
     <main>
-      <PageHero 
+      <Hero 
         title="Neem Contact Op"
-        subtitle="Heeft u een vraag of heeft u een offerte nodig? Onze specialisten staan klaar om u te helpen - 24/7 bereikbaar voor spoedgevallen"
+        description="Heeft u een vraag of heeft u een offerte nodig? Onze specialisten staan klaar om u te helpen - 24/7 bereikbaar voor spoedgevallen"
+        bullets={bullets}
+        images={heroImages}
       />
+
+      <FeaturesSectie />
 
       <section className="py-20 bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -172,7 +189,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <WhyUs dark />
+      <WhyUs />
       <Process />
       <Footer />
     </main>

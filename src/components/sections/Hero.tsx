@@ -1,34 +1,46 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { Zap, Phone, Home, FileCheck, Calendar, ArrowRight, Shield, Clock, Award, CheckCircle } from "lucide-react";
+import { Phone, ArrowRight, CheckCircle, Shield, Clock, Zap, Home, FileCheck, Calendar, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 
-const heroImages = [
-  {
-    url: "/images/electrician-working-switchboard-with-electrical-connection-cable-copy-space (1).jpg",
-    alt: "Elektricien aan het werk"
-  },
-  {
-    url: "/images/electrician-working-switchboard-with-electrical-connection-cable-copy-space.jpg",
-    alt: "Elektrische installatie"
-  },
-  {
-    url: "/images/engineer-with-blueprints-standing-near-electrical-panel-blue-light-engineer-energy-control.jpg",
-    alt: "Engineer bij elektrisch paneel"
-  }
+interface HeroProps {
+  title?: string;
+  description?: string;
+  bullets?: string[];
+  stats?: { icon: React.ElementType; value: string; label: string }[];
+  images?: { url: string; alt: string }[];
+}
+
+const defaultImages = [
+  { url: "/images/electrician-working-switchboard-with-electrical-connection-cable-copy-space (1).jpg", alt: "Elektricien aan het werk" },
+  { url: "/images/electrician-working-switchboard-with-electrical-connection-cable-copy-space.jpg", alt: "Elektrische installatie" },
+  { url: "/images/engineer-with-blueprints-standing-near-electrical-panel-blue-light-engineer-energy-control.jpg", alt: "Engineer bij elektrisch paneel" }
 ];
 
-export function Hero() {
+const defaultBullets = [
+  "Erkend installateur met NEN 3140 & NEN 1010",
+  "24/7 storingsdienst voor spoedgevallen",
+  "Garantie op al ons werk",
+];
+
+const defaultStats = [
+  { icon: Zap, value: "15+", label: "Jaar Ervaring" },
+  { icon: Home, value: "500+", label: "Projecten" },
+  { icon: FileCheck, value: "100%", label: "Gecertificeerd" },
+  { icon: Calendar, value: "24/7", label: "Bereikbaar" },
+];
+
+export function Hero({ title = "Professionele Elektrotechnische Installaties", description = "Van storingsdienst tot complete nieuwbouwprojecten. Wij leveren kwaliteit en betrouwbaarheid voor woning en bedrijf in de regio Amsterdam.", bullets = defaultBullets, stats = defaultStats, images = defaultImages }: HeroProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % heroImages.length);
+      setCurrentIndex((prev) => (prev + 1) % images.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [images.length]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -36,8 +48,8 @@ export function Hero() {
         <AnimatePresence mode="wait">
           <motion.img
             key={currentIndex}
-            src={heroImages[currentIndex].url}
-            alt={heroImages[currentIndex].alt}
+            src={images[currentIndex].url}
+            alt={images[currentIndex].alt}
             initial={{ opacity: 0, scale: 1.1 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
@@ -51,28 +63,16 @@ export function Hero() {
       <div className="absolute top-20 left-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 pb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 pb-12 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mb-6"
-            >
-              <span className="inline-flex items-center gap-2 bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm border border-accent/30">
-                <Award className="w-4 h-4" />
-                15+ Jaar Ervaring
-              </span>
-            </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight"
             >
-              Professionele Elektrotechnische <span className="text-accent">Installaties</span>
+              {title}
             </motion.h1>
 
             <motion.p
@@ -81,7 +81,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg text-white/80 mb-8"
             >
-              Van storingsdienst tot complete nieuwbouwprojecten. Wij leveren kwaliteit en betrouwbaarheid voor woning en bedrijf in de regio Amsterdam.
+              {description}
             </motion.p>
 
             <motion.div
@@ -90,14 +90,10 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="space-y-4 mb-8"
             >
-              {[
-                { icon: CheckCircle, text: "Erkend installateur met NEN 3140 & NEN 1010" },
-                { icon: Clock, text: "24/7 storingsdienst voor spoedgevallen" },
-                { icon: Shield, text: "Garantie op al ons werk" },
-              ].map((item, i) => (
+              {bullets.map((text, i) => (
                 <div key={i} className="flex items-center gap-3 text-white/80">
-                  <item.icon className="w-5 h-5 text-accent flex-shrink-0" />
-                  <span>{item.text}</span>
+                  <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
+                  <span>{text}</span>
                 </div>
               ))}
             </motion.div>
@@ -129,14 +125,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="grid grid-cols-2 gap-4"
           >
-            {[
-              { icon: Zap, value: "15+", label: "Jaar Ervaring" },
-              { icon: Home, value: "500+", label: "Projecten" },
-              { icon: FileCheck, value: "100%", label: "Gecertificeerd" },
-              { icon: Calendar, value: "24/7", label: "Bereikbaar" },
-            ].map((stat, i) => (
+            {stats.map((stat, i) => (
               <div
-                key={stat.label}
+                key={i}
                 className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center hover:bg-white/15 transition-colors"
               >
                 <stat.icon className="w-8 h-8 text-accent mx-auto mb-3" />
@@ -149,7 +140,7 @@ export function Hero() {
       </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
-        {heroImages.map((_, i) => (
+        {images.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrentIndex(i)}
