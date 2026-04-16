@@ -95,7 +95,7 @@ export default function ContactPage() {
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-semibold text-gray-700">Telefoon</label>
-                      <Input placeholder="06-12345678" type="tel" value={form.telefoon} onChange={(e) => setForm({...form, telefoon: e.target.value})} className="h-12 rounded-xl border-gray-200 focus:border-accent focus:ring-accent/20" />
+                      <Input placeholder="085-3696615" type="tel" value={form.telefoon} onChange={(e) => setForm({...form, telefoon: e.target.value})} className="h-12 rounded-xl border-gray-200 focus:border-accent focus:ring-accent/20" />
                     </div>
                   </div>
                   <div className="space-y-2">
@@ -145,7 +145,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold">Telefoon</p>
-                      <a href="tel:+31612345678" className="text-accent hover:text-accent/80 transition-colors">06-12345678</a>
+                      <a href="tel:+31853696615" className="text-accent hover:text-accent/80 transition-colors">085-3696615</a>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -177,8 +177,8 @@ export default function ContactPage() {
                   <h3 className="text-lg font-bold text-primary">Storingsdienst</h3>
                 </div>
                 <p className="text-gray-600 text-sm mb-4">Problemen met uw elektrische installatie? Onze spoedservice is 24/7 bereikbaar.</p>
-                <a href="tel:+31612345678" className="inline-flex items-center gap-2 text-accent font-bold hover:text-accent/80 transition-colors">
-                  06-12345678
+                <a href="tel:+31853696615" className="inline-flex items-center gap-2 text-accent font-bold hover:text-accent/80 transition-colors">
+                  085-3696615
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>

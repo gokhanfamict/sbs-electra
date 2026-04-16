@@ -110,7 +110,7 @@ export function Hero({ title = "Professionele Elektrotechnische Installaties", d
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Link href="tel:+31612345678">
+              <Link href="tel:+31853696615">
                 <Button size="lg" className="h-14 px-8 bg-white hover:bg-white/90 text-primary font-semibold rounded-xl">
                   <Phone className="w-5 h-5 mr-2" />
                   Bel Direct

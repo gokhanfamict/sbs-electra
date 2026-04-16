@@ -36,7 +36,7 @@ export function Navbar() {
             ))}
           </nav>
           <div className="hidden lg:flex items-center space-x-4">
-            <a href="tel:+31612345678" className="flex items-center space-x-2 text-white text-sm"><Phone className="w-4 h-4 text-accent" /><span>06-12345678</span></a>
+            <a href="tel:+31853696615" className="flex items-center space-x-2 text-white text-sm"><Phone className="w-4 h-4 text-accent" /><span>085-3696615</span></a>
             <Link href="/contact" className="bg-accent text-primary px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-accent/90 transition-colors">Offerte Aanvragen</Link>
           </div>
           <button className="lg:hidden text-white" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>

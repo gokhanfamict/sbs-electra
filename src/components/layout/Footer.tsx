@@ -38,7 +38,7 @@ export function Footer() {
             <h4 className="font-semibold text-lg mb-6">Contact</h4>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3"><MapPin className="w-5 h-5 text-accent mt-0.5" /><span className="text-white/70 text-sm">Kastanjelaan 45<br />1161VA Zwanenburg</span></li>
-              <li className="flex items-center space-x-3"><Phone className="w-5 h-5 text-accent" /><a href="tel:+31612345678" className="text-white/70 hover:text-accent text-sm">06-12345678</a></li>
+              <li className="flex items-center space-x-3"><Phone className="w-5 h-5 text-accent" /><a href="tel:+31853696615" className="text-white/70 hover:text-accent text-sm">085-3696615</a></li>
               <li className="flex items-center space-x-3"><Mail className="w-5 h-5 text-accent" /><a href="mailto:info@sbselectra.nl" className="text-white/70 hover:text-accent text-sm">info@sbselectra.nl</a></li>
             </ul>
           </div>

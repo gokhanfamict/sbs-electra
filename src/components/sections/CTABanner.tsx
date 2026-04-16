@@ -48,13 +48,13 @@ export function CTABanner({ dark = true }: CTABannerProps) {
           >
             <h3 className={`text-xl font-bold mb-6 ${dark ? 'text-white' : 'text-primary'}`}>Neem contact met ons op</h3>
             <div className="space-y-4 mb-6">
-              <a href="tel:+31612345678" className={`flex items-center gap-4 ${dark ? 'text-white hover:text-accent' : 'text-primary hover:text-accent'} transition-colors`}>
+              <a href="tel:+31853696615" className={`flex items-center gap-4 ${dark ? 'text-white hover:text-accent' : 'text-primary hover:text-accent'} transition-colors`}>
                 <div className={`w-12 h-12 ${dark ? 'bg-accent/20' : 'bg-primary/10'} rounded-xl flex items-center justify-center`}>
                   <Phone className={`w-6 h-6 ${dark ? 'text-accent' : 'text-primary'}`} />
                 </div>
                 <div>
                   <p className={`text-sm ${dark ? 'text-white/60' : 'text-gray-500'}`}>Bel direct</p>
-                  <p className="font-semibold">06-12345678</p>
+                  <p className="font-semibold">085-3696615</p>
                 </div>
               </a>
               <a href="mailto:info@sbselectra.nl" className={`flex items-center gap-4 ${dark ? 'text-white hover:text-accent' : 'text-primary hover:text-accent'} transition-colors`}>
